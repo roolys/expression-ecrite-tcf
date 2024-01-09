@@ -192,7 +192,7 @@ function downloadContent() {
   const element = document.createElement('a'); // Crée un élément de lien
   const file = new Blob([textToSave], {type: 'text/plain'}); // Crée un fichier Blob avec le contenu
   element.href = URL.createObjectURL(file); // Définit l'URL du lien avec l'URL du fichier Blob
-  element.download = 'devoir.txt'; // Définit le nom du fichier de téléchargement
+  element.download = 'expression-ecrite-TCF.txt'; // Définit le nom du fichier de téléchargement
   document.body.appendChild(element); // Ajoute l'élément de lien au corps du document
   element.click(); // Simule un clic sur le lien pour déclencher le téléchargement
 }
