@@ -107,7 +107,7 @@ const firstTextarea = document.querySelector('#textarea1'); // Sélectionne le p
 const timerElement = document.querySelector('#timer'); // Sélectionne l'élément d'affichage du chronomètre
 
 let timer;
-let minutes = 1;
+let minutes = 60;
 let seconds = 0;
 
 firstTextarea.addEventListener('click', () => {
@@ -181,6 +181,7 @@ function downloadContent() {
     content.push(h3Paragraph.textContent.trim()); // Ajoute le texte du paragraphe dans le contenu
   });
   content.push('');
+  content.push('');
 
   content.push(textarea3.value.trim()); // Ajoute le contenu du troisième textarea dans le contenu
   content.push('');
@@ -192,7 +193,7 @@ function downloadContent() {
   const element = document.createElement('a'); // Crée un élément de lien
   const file = new Blob([textToSave], {type: 'text/plain'}); // Crée un fichier Blob avec le contenu
   element.href = URL.createObjectURL(file); // Définit l'URL du lien avec l'URL du fichier Blob
-  element.download = 'expression-ecrite-TCF.txt'; // Définit le nom du fichier de téléchargement
+  element.download = 'expression-ecrite-TCFCanada.txt'; // Définit le nom du fichier de téléchargement
   document.body.appendChild(element); // Ajoute l'élément de lien au corps du document
   element.click(); // Simule un clic sur le lien pour déclencher le téléchargement
 }
